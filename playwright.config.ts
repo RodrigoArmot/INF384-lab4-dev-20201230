@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: 'test/e2e',
@@ -10,5 +10,5 @@ export default defineConfig({
     baseURL: process.env.BASE_URL,
     extraHTTPHeaders: { accept: 'application/json' },
   },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+  projects: [{ name: 'api' }],
 });
