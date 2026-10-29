@@ -43,7 +43,7 @@ function transferir(store, { origen, destino, monto } = {}) {
     throw new ErrorNegocio(400, 'usuario invalido');
   }
   if (origen === destino) {
-    throw new ErrorNegocio(422, 'origen y destino son el mismo usuario');
+    throw new ErrorNegocio(400, 'origen y destino son el mismo usuario');
   }
   const cuentaOrigen = store.usuario(origen);
   const cuentaDestino = store.usuario(destino);
